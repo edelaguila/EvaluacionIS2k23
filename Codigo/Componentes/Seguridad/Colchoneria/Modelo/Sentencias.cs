@@ -285,13 +285,8 @@ namespace Modelo_Seguridad
                 OdbcDataReader reader = command.ExecuteReader();
                 while (reader.Read())
                 {
-                    permisos[i] = reader["username_usuario"].ToString();
-                    /*permisos[i + 1] = int.Parse(reader.GetValue(1).ToString());
-                    permisos[i + 2] = int.Parse(reader.GetValue(2).ToString());
-                    permisos[i + 3] = int.Parse(reader.GetValue(3).ToString());
-                    permisos[i + 4] = int.Parse(reader.GetValue(4).ToString());
-                    permisos[i + 5] = int.Parse(reader.GetValue(5).ToString());
-                    permisos[i + 6] = int.Parse(reader.GetValue(6).ToString());*/
+                    permisos[i] = reader["username_usuario"].ToString(); // Eliminacion de codigo comentado
+                    
                 }
             }
             catch (Exception ex)
