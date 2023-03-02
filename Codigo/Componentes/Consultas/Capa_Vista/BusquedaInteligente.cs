@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Capa_ControladorConsultas;
 using System.Data.Odbc;
-
+// hacer busqueda inteligente
 //Menu busqueda inteligente comentado por mario lopez
 namespace Capa_VistaConsultas
 {
@@ -28,7 +28,7 @@ namespace Capa_VistaConsultas
 
             panel13.Enabled = false;
             panel15.Enabled = false;
-            // groupBox3.Enabled = false;
+            groupBox3.Enabled = false;
             groupBox6.Enabled = false;
             groupBox4.Enabled = false;
             groupBox5.Enabled = false;
@@ -51,7 +51,6 @@ namespace Capa_VistaConsultas
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
-            // Jonathan Xuyá 0901-19-
             //boton agregar de creacion de consulta
 
             Capa_ControladorConsultas.csControldor crud = new Capa_ControladorConsultas.csControldor();
@@ -60,12 +59,12 @@ namespace Capa_VistaConsultas
             if (resultado)
 
             {
-                MessageBox.Show("Datos guardados");
+                MessageBox.Show("Datos guardados correctamente");
             }
 
             textBox1.Text = (txtNombreConsulta.Text + "+" + cboTabla.Text + "+" + comboBox11.Text + "+" + textBox11.Text + "+");
             string columnasbd = comboBox11.Text;
-            //CargarColumnas(columnasbd, comboBox11);
+            CargarColumnas(columnasbd, comboBox11);
         }
 
         private void iconButton7_Click(object sender, EventArgs e)
