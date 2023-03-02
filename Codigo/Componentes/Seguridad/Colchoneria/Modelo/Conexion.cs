@@ -12,7 +12,8 @@ namespace Modelo_Seguridad
 
         public OdbcConnection conexion()
         {
-            
+         
+            //Este es el método para la conexión a la base de datos mediante odbc
             OdbcConnection conn = new OdbcConnection("Dsn=colchoneria");
             try
             {
@@ -24,7 +25,7 @@ namespace Modelo_Seguridad
             }
             return conn;
         }
-        
+        //Este es el método para desconectar
         public void desconexion(OdbcConnection conn)
         {
             try
