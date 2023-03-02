@@ -90,5 +90,10 @@ namespace Vista_Seguridad
            b.Show();*/
             cn.setBtitacora("8000", "Ingreso Contabilidad");
         }
+
+        private void Menup_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

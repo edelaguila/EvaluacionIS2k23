@@ -12,7 +12,7 @@ using System.Net;
 
 
 namespace Seguridad_Controlador
-{   //comentado por Jason Ortega 0901-19-22658 02/03/23
+{   //comentado por Jason Ortega 0901-19-22658 25/02/23
     public class Controlador
     {
         Sentencias sn = new Sentencias();  //se hace la conexion con la clase sentencia
@@ -21,7 +21,7 @@ namespace Seguridad_Controlador
 
         public static string idUser;
 
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public static string SetHash(string inputString) //recibe una cadena de entrada inputString
         {
             string hash = "x2";
@@ -35,7 +35,7 @@ namespace Seguridad_Controlador
             return Convert.ToBase64String(output); //se convierte la matriz de bytes cifrada a una cadena Base64 y se devuelve como salida de la funcion
         }
 
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public static string GetHash(string inputString)
         {
             string hash = "x2";
@@ -49,7 +49,7 @@ namespace Seguridad_Controlador
             return UTF8Encoding.UTF8.GetString(output);
         }
 
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public void setBtitacora(string aplicacion, string accion) //se crea un registro de bitacora con la informacion sobre las acciones realizadas por un usuario
         {
             string fechaActual = DateTime.Now.ToString("yyyy/MM/dd");
@@ -66,7 +66,7 @@ namespace Seguridad_Controlador
         {
             return sn.queryNombreApp(codigoApp);
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public Boolean getAccesoModulos(int moduloSolicitado)  //acceso a los modulo en funcion de los perfiles.
         {
             string idUsuario = GetHash(idUser);
@@ -122,7 +122,7 @@ namespace Seguridad_Controlador
 
             return respuestAcceso;
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public void deshabilitarApps(Button[] paneles) //deshabilita los paneles 
         {
             for (int i = 0; i < paneles.Length; i++)
@@ -151,7 +151,7 @@ namespace Seguridad_Controlador
                 }
             }
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public int[] getPermisosAplicaion(string App) //da los permisos a una aplicacion 
         {
             int[] result = new int[5];
@@ -192,7 +192,7 @@ namespace Seguridad_Controlador
             }
             return permisos;
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public Boolean validarLogin(string username, string password) //Valida en inicio de sesion del usuario
         {
             string[] datos = sn.queryLogin(username);
@@ -209,7 +209,7 @@ namespace Seguridad_Controlador
             }
             return false;
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public Boolean validarRecuperacion(string username, string respuesta) //valida la respuesta del usuario a una pregunta de seguridad
         {
             string[] datos = sn.queryRecuperacion(username);
@@ -229,7 +229,7 @@ namespace Seguridad_Controlador
 
 
 
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public DataTable buscarlogin(string tabla, string dato1, string dato2)
         {
             OdbcDataAdapter dt = sn.buscarlogin(tabla, dato1, dato2);
@@ -237,7 +237,7 @@ namespace Seguridad_Controlador
             dt.Fill(table);
             return table;
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
 
         public void ingresar(TextBox[] textbox, string tabla/*, string app*/)//Crea cadenas de datos para la insercion
         {
@@ -262,7 +262,7 @@ namespace Seguridad_Controlador
             sn.insertar(dato, tipo, tabla);
           //  setBtitacora(app, "Insertar");
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public void buscar(TextBox[] textbox, string tabla,int num,string condicion) //Realiza busqueda segun el campo
         {
             // string message = "Registro de text Nombre " + tabla + " id " +  num + " ";
@@ -274,7 +274,7 @@ namespace Seguridad_Controlador
             sn.busqueda(textbox,tabla, num, campo);
            // MessageBox.Show("Dato Encontrado");
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public void actualizarcontra(TextBox[] textbox, string tabla, string campo, string usu) //actualiza contraseña de usuario
         {
             string dato = " ";
@@ -289,7 +289,7 @@ namespace Seguridad_Controlador
             sn.actualizarcontra(dato, condicion, tabla, usu);
             MessageBox.Show("Dato actualizado");
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public void actualizar(TextBox[] textbox, string tabla,string campo, int num) //actualiza los datos de una tabla en la base de datos
         {
             string dato = " ";
@@ -320,7 +320,7 @@ namespace Seguridad_Controlador
             sn.actualizar(dato, condicion, tabla,num);
             MessageBox.Show("Dato actualizado");
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public DataTable llenarTbl(string tabla)
         {
             OdbcDataAdapter dt = sn.llenarTbl(tabla);
@@ -329,7 +329,7 @@ namespace Seguridad_Controlador
             return table;
         }
 
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
 
         public void eliminar(string tabla, string condicion,int campo) //elimina datos de una tabla
         {
@@ -342,7 +342,7 @@ namespace Seguridad_Controlador
                 Console.WriteLine(ex.Message.ToString() + " \nNo se puede eliminar por permisos asignados");
             }
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public void eliminarAsiganaciones(string tabla, string condicion1, int campo1, string condicion2, int campo2) //elimina asignaciones
         {
             try
@@ -355,7 +355,7 @@ namespace Seguridad_Controlador
                 Console.WriteLine(ex.Message.ToString() + " \nNo se puede eliminar por permisos asignados");
             }
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public void llenartablaa(string ntabla, DataGridView tabla) //llena tabla segun datos ingresados
         {
             OdbcDataAdapter dt = sn.llenartabla(ntabla);
@@ -364,7 +364,7 @@ namespace Seguridad_Controlador
             tabla.DataSource = table;
         }
 
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public DataTable SelectList(string tabla,string campo) //Selecciona una lista de la base de datos
         {
             OdbcDataAdapter dt = sn.selectList(tabla, campo);
@@ -372,7 +372,7 @@ namespace Seguridad_Controlador
             dt.Fill(table);
             return table;
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public void llenarListAplicaciones(string ntabla, DataGridView tabla) //Llena la lista de aplicaciones
         {
             OdbcDataAdapter dt = sn.llenarListaAplicaciones(ntabla);
@@ -380,7 +380,7 @@ namespace Seguridad_Controlador
             dt.Fill(table);
             tabla.DataSource = table;
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public void llenarListModulo(string ntabla, DataGridView tabla) //Llena la lista de modulos 
         {
             OdbcDataAdapter dt = sn.llenarListaModulos(ntabla);
@@ -388,7 +388,7 @@ namespace Seguridad_Controlador
             dt.Fill(table);
             tabla.DataSource = table;
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public void llenarListUsuarios(string ntabla, DataGridView tabla) //Llena la lista de usuarios
         {
             OdbcDataAdapter dt = sn.llenarListaUsuarios(ntabla);
@@ -396,7 +396,7 @@ namespace Seguridad_Controlador
             dt.Fill(table);
             tabla.DataSource = table;
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public void llenarListApliUsuariosstring(string ntabla, DataGridView tabla,string id) //Llena la lista de aplicacion de usuario
         {
             OdbcDataAdapter dt = sn.llenarListaApliUsuario(ntabla, id);
@@ -404,7 +404,7 @@ namespace Seguridad_Controlador
             dt.Fill(table);
             tabla.DataSource = table;
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public void llenarListPerfiles(string ntabla, DataGridView tabla) //Llena la lista de perfiles
         {
             OdbcDataAdapter dt = sn.llenarListaPerfiles(ntabla);
@@ -414,12 +414,12 @@ namespace Seguridad_Controlador
         }
 
 
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public string llenarPregunta(string username) //devuelve la pregunta de seguridad asociada con el usuario.
         {
             return sn.getPregunta(username);
         }
-        //comentado por Jason Ortega 0901-19-22658 02/03/23
+        //comentado por Jason Ortega 0901-19-22658 25/02/23
         public string[] buscarusu(string username) //Busca informacion de usuario
         {
             return sn.buscarusua(username);
