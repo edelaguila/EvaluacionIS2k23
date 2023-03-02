@@ -14,6 +14,7 @@ namespace CapaVistaReporteria
 {
     public partial class Inicio : Form
     {
+        //Este modulo sirve para mostrar los reportes que se han hecho para las aplicaciones adjuntados para sus modulos.
         CapaControladorReporteria.Controlador controlador = new CapaControladorReporteria.Controlador();
         public Inicio()
         {
@@ -126,7 +127,7 @@ namespace CapaVistaReporteria
 
         private void btn_modificar_Click(object sender, EventArgs e)
         {
-
+            //Funcion que obtiene unicamente el id del rpeorte y ejecutara una funcion en el controlador para elimnar el reporteador
         }
 
         private void cargarCategorias()
