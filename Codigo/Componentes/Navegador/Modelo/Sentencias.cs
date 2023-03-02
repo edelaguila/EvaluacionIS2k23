@@ -1,5 +1,6 @@
 ﻿//Revisado por: Joselyne Rivera 0901-17-5
 // Fecha 26/02/2023
+//Revisado por Ester Lopez Primer Parcial Fecha 02/03/2023
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ namespace NavegadorModelo
 {
     public class Sentencias
     {
+        //Se cambiaron variables para que fueran más claras y precisas Ester Lopez
         Conexion conexion = new Conexion();
 
         public OdbcDataAdapter llenartabla(string tabla)
@@ -30,8 +32,8 @@ namespace NavegadorModelo
             try
             {
                 string sql = "insert into " + tabla + "(" + tipo + ") values (" + dato + ")";
-                OdbcCommand cmd = new OdbcCommand(sql, conexion.conexion()); //las siglas cmd se encarga de interpretar de comandos en OS/2
-                cmd.ExecuteNonQuery();
+                OdbcCommand comandoOdbc = new OdbcCommand(sql, conexion.conexion()); //las siglas cmd se encarga de interpretar de comandos en OS/2
+                comandoOdbc.ExecuteNonQuery();
             }
             catch (Exception e)
             {
@@ -61,8 +63,8 @@ namespace NavegadorModelo
             try
             {
                 string sql = "Update " + tabla + " " + dato + " where " + condicion;
-                OdbcCommand cmd = new OdbcCommand(sql, conexion.conexion());
-                cmd.ExecuteNonQuery();
+                OdbcCommand comandoOdbc = new OdbcCommand(sql, conexion.conexion());
+                comandoOdbc.ExecuteNonQuery();
             }
             catch (Exception e)
             {
@@ -118,8 +120,8 @@ namespace NavegadorModelo
 
             string[] datos = new string[tamaño];
             string sql = "select * from " + tabla + " where " + tipo + " = '" + dato + "'";
-            OdbcCommand cmd = new OdbcCommand(sql, conexion.conexion());
-            OdbcDataReader lr = cmd.ExecuteReader();
+            OdbcCommand comandoOdbc = new OdbcCommand(sql, conexion.conexion());
+            OdbcDataReader lr = comandoOdbc.ExecuteReader();
             while (lr.Read())
             {
                 for (int x = 0; x < tamaño; x++)
@@ -138,8 +140,8 @@ namespace NavegadorModelo
         {
             int dato = 0;
             string sql = "select count(*) as total from " + tabla;
-            OdbcCommand cmd = new OdbcCommand(sql, conexion.conexion());
-            OdbcDataReader lr = cmd.ExecuteReader();
+            OdbcCommand comandoOdbc = new OdbcCommand(sql, conexion.conexion());
+            OdbcDataReader lr = comandoOdbc.ExecuteReader();
             while (lr.Read())
             {
 
@@ -149,22 +151,22 @@ namespace NavegadorModelo
             }
             return dato;
         }
-
+        //Cambios por Ester Lopez
         public string reporteestado(string id)
         {
 
             string estado = "";
             string sql1 = "select * from tbl_regreporteria where aplicacion=" + id + ";";
-            OdbcCommand cmd = new OdbcCommand(sql1, conexion.conexion());
-            OdbcDataReader s = cmd.ExecuteReader();
-            while (s.Read())
+            OdbcCommand comandoOdbc = new OdbcCommand(sql1, conexion.conexion());
+            OdbcDataReader leerOdbc = comandoOdbc.ExecuteReader();
+            while (leerOdbc.Read())
             {
                 for (int x = 0; x < 5; x++)
                 {
 
                     if (x == 4)
                     {
-                        estado = s.GetString(x);
+                        estado = leerOdbc.GetString(x);
                     }
                 }
             }
@@ -173,21 +175,22 @@ namespace NavegadorModelo
             return estado;
 
         }
+        //Cambios por Ester Lopez
         public string reporteestado1(string id)
         {
 
             string ubicacion = "";
             string sql1 = "select * from tbl_regreporteria where aplicacion=" + id + ";";
-            OdbcCommand cmd = new OdbcCommand(sql1, conexion.conexion());
-            OdbcDataReader s = cmd.ExecuteReader();
-            while (s.Read())
+            OdbcCommand comandoOdbc = new OdbcCommand(sql1, conexion.conexion());
+            OdbcDataReader leerOdbc = comandoOdbc.ExecuteReader();
+            while (leerOdbc.Read())
             {
                 for (int x = 0; x < 5; x++)
                 {
 
                     if (x == 1)
                     {
-                        ubicacion = s.GetString(x);
+                        ubicacion = leerOdbc.GetString(x);
                     }
                 }
             }
