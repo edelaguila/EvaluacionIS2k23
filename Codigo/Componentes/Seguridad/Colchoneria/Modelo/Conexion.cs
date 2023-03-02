@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 using System.Data.Odbc;
 
 //Comentado por Luis Torres 26/02/2023
+//Verificacion que cumple con los comentarios
+//Realizado por Luis Torres 02/03/23
 namespace Modelo_Seguridad
 {
+
     class Conexion
     {
         //Metodo de conexion a base de datos

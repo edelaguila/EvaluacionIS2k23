@@ -11,6 +11,8 @@ using Seguridad_Controlador;
 //Comentado por George Mayén 25/02/2023
 namespace Vista_Seguridad
 {
+    //Verificacion que cumple con los comentarios
+    //Realizado por Luis Torres 02/03/23
     public partial class AsignacionModuloAplicacion : Form
     {
         Controlador cn = new Controlador();

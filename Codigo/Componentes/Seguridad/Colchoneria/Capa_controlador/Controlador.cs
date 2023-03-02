@@ -10,7 +10,8 @@ using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.Net;
 
-
+//Verificacion que cumple con los comentarios
+//Realizado por Luis Torres 02/03/23
 namespace Seguridad_Controlador
 {   //comentado por Jason Ortega 0901-19-22658 25/02/23
     public class Controlador
