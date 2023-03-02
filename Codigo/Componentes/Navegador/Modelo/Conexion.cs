@@ -1,4 +1,5 @@
 ﻿//Revisado por Rene Alexander Fecha 26/02/2023
+//Revisado por Ester Lopez Primer Parcial 02/03/2023
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,24 +16,25 @@ namespace NavegadorModelo
         public OdbcConnection conexion()
         {
             //creacion de la conexion via ODBC
-            OdbcConnection conn = new OdbcConnection("Dsn=colchoneria");
+            //Se cambiaron las variables para que fueran más claras y precisas Ester Lopez
+            OdbcConnection conexionODBC = new OdbcConnection("Dsn=colchoneria");
             try
             {
-                conn.Open();
+                conexionODBC.Open();
             }
             catch (OdbcException)
             {
                 Console.WriteLine("Sin conexión");
             }
-            return conn;
+            return conexionODBC;
         }
 
         //metodo para cerrar la conexion
-        public void cerrar_conexion(OdbcConnection conn)
+        public void cerrar_conexion(OdbcConnection conexionODBC)
         {
             try
             {
-                conn.Close();
+                conexionODBC.Close();
             }
             catch (OdbcException)
             {

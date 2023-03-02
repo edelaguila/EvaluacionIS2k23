@@ -1,4 +1,5 @@
-﻿//Revisado por Ester Lopez fecha 26/02/2023
+﻿//Revisado por Ester Lopez fecha 26/02/2023 
+//Revisado por Ester Lopez Primer Parcial 2/03/2023
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,8 @@ namespace NavegadorVista
     {
         
         //Se cambio los nombres de las variables para que sean más clara la referencia
+        //conexionControlador 
+        //conexionSeguridad
         csControlador conexionControlador = new csControlador();
 
         Seguridad_Controlador.Controlador conexionSeguridad = new Seguridad_Controlador.Controlador();
@@ -275,6 +278,7 @@ namespace NavegadorVista
             bloqStart(botongc2);
         }
 
+        //Boton actualizar
         private void btnUpdate_Click(object sender, EventArgs e)
         {
 
@@ -282,6 +286,7 @@ namespace NavegadorVista
             conexionControlador.moverseIF(tabla, "i");
         }
 
+        //Boton de ayuda
         private void btnHelp_Click(object sender, EventArgs e)
         {
             Ayuda ayuda = new Ayuda();
@@ -289,6 +294,7 @@ namespace NavegadorVista
 
         }
 
+        //Boton de consulta
         private void btnConsultar_Click(object sender, EventArgs e)
         {
             consulta();
@@ -299,6 +305,7 @@ namespace NavegadorVista
 
         }
 
+        //Boton de Reporte
         private void btnReporte_Click(object sender, EventArgs e)
         {
             conexionSeguridad.setBtitacora(idApp, "Reportes");
