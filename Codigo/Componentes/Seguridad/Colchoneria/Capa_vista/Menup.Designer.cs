@@ -68,12 +68,12 @@ namespace Vista_Seguridad
             // 
             // btlogistica
             // 
-            this.btlogistica.BackColor = System.Drawing.Color.SlateGray;
+            this.btlogistica.BackColor = System.Drawing.Color.Red;
             this.btlogistica.Cursor = System.Windows.Forms.Cursors.Default;
             this.btlogistica.Dock = System.Windows.Forms.DockStyle.Top;
             this.btlogistica.FlatAppearance.BorderSize = 0;
             this.btlogistica.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btlogistica.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btlogistica.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btlogistica.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.btlogistica.Location = new System.Drawing.Point(0, 107);
             this.btlogistica.Margin = new System.Windows.Forms.Padding(4);
@@ -88,12 +88,12 @@ namespace Vista_Seguridad
             // 
             // btncompras
             // 
-            this.btncompras.BackColor = System.Drawing.Color.SlateGray;
+            this.btncompras.BackColor = System.Drawing.Color.Red;
             this.btncompras.Cursor = System.Windows.Forms.Cursors.Default;
             this.btncompras.Dock = System.Windows.Forms.DockStyle.Top;
             this.btncompras.FlatAppearance.BorderSize = 0;
             this.btncompras.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btncompras.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btncompras.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btncompras.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.btncompras.Location = new System.Drawing.Point(0, 155);
             this.btncompras.Margin = new System.Windows.Forms.Padding(4);
@@ -108,12 +108,12 @@ namespace Vista_Seguridad
             // 
             // btnProduccion
             // 
-            this.btnProduccion.BackColor = System.Drawing.Color.SlateGray;
+            this.btnProduccion.BackColor = System.Drawing.Color.Red;
             this.btnProduccion.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnProduccion.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnProduccion.FlatAppearance.BorderSize = 0;
             this.btnProduccion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProduccion.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProduccion.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProduccion.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.btnProduccion.Location = new System.Drawing.Point(0, 203);
             this.btnProduccion.Margin = new System.Windows.Forms.Padding(4);
@@ -128,12 +128,12 @@ namespace Vista_Seguridad
             // 
             // btnnominas
             // 
-            this.btnnominas.BackColor = System.Drawing.Color.SlateGray;
+            this.btnnominas.BackColor = System.Drawing.Color.Red;
             this.btnnominas.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnnominas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnnominas.FlatAppearance.BorderSize = 0;
             this.btnnominas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnnominas.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnnominas.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnnominas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.btnnominas.Location = new System.Drawing.Point(0, 251);
             this.btnnominas.Margin = new System.Windows.Forms.Padding(4);
@@ -148,12 +148,12 @@ namespace Vista_Seguridad
             // 
             // btnBancos
             // 
-            this.btnBancos.BackColor = System.Drawing.Color.SlateGray;
+            this.btnBancos.BackColor = System.Drawing.Color.Red;
             this.btnBancos.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnBancos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnBancos.FlatAppearance.BorderSize = 0;
             this.btnBancos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBancos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBancos.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBancos.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.btnBancos.Location = new System.Drawing.Point(0, 299);
             this.btnBancos.Margin = new System.Windows.Forms.Padding(4);
@@ -168,12 +168,12 @@ namespace Vista_Seguridad
             // 
             // btnContabilidad
             // 
-            this.btnContabilidad.BackColor = System.Drawing.Color.SlateGray;
+            this.btnContabilidad.BackColor = System.Drawing.Color.Red;
             this.btnContabilidad.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnContabilidad.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnContabilidad.FlatAppearance.BorderSize = 0;
             this.btnContabilidad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnContabilidad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContabilidad.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnContabilidad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.btnContabilidad.Location = new System.Drawing.Point(0, 347);
             this.btnContabilidad.Margin = new System.Windows.Forms.Padding(4);
@@ -209,12 +209,12 @@ namespace Vista_Seguridad
             // 
             // btnLogout
             // 
-            this.btnLogout.BackColor = System.Drawing.Color.SlateGray;
+            this.btnLogout.BackColor = System.Drawing.Color.Red;
             this.btnLogout.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnLogout.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLogout.FlatAppearance.BorderSize = 0;
             this.btnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogout.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.btnLogout.Location = new System.Drawing.Point(0, 443);
             this.btnLogout.Margin = new System.Windows.Forms.Padding(4);
@@ -229,12 +229,12 @@ namespace Vista_Seguridad
             // 
             // btnseguridad
             // 
-            this.btnseguridad.BackColor = System.Drawing.Color.SlateGray;
+            this.btnseguridad.BackColor = System.Drawing.Color.Red;
             this.btnseguridad.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnseguridad.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnseguridad.FlatAppearance.BorderSize = 0;
             this.btnseguridad.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnseguridad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnseguridad.Font = new System.Drawing.Font("SimSun", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnseguridad.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(227)))), ((int)(((byte)(242)))), ((int)(((byte)(253)))));
             this.btnseguridad.Location = new System.Drawing.Point(0, 395);
             this.btnseguridad.Margin = new System.Windows.Forms.Padding(4);
