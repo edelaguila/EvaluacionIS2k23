@@ -128,6 +128,7 @@ namespace CapaVistaReporteria
         private void btn_modificar_Click(object sender, EventArgs e)
         {
             //Funcion que obtiene unicamente el id del rpeorte y ejecutara una funcion en el controlador para elimnar el reporteador
+
         }
 
         private void cargarCategorias()

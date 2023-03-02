@@ -50,5 +50,19 @@ namespace CapaModeloReporteria
                 Console.WriteLine(ex.Message.ToString() + " \nNo se puede eliminar el registro "+id_reporte+" en la tabla "+tabla_reporteria);
             }
         }
+
+        public void actualizarReporte(string id_reporte, string campos)
+        {
+            try
+            {
+                string sql = "Update " + tabla_reporteria + " " + campos + " where idregistro=" + id_reporte + "; ";
+                OdbcCommand cmd = new OdbcCommand(sql, conexion.conexion());
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message.ToString() + " \nNo se puede actualizar el registro " + id_reporte + " en la tabla " + tabla_reporteria);
+            }
+        }
     }
 }
